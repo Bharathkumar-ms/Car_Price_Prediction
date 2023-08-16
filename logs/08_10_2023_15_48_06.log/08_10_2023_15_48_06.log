@@ -1,0 +1,9 @@
+[ 2023-08-10 15:48:08,809 ] 27 root - INFO - Entered the data ingestion method or component
+[ 2023-08-10 15:48:08,809 ] 30 root - INFO - Read the dataset as dataframe
+[ 2023-08-10 15:48:08,827 ] 36 root - INFO - Train test split initiated
+[ 2023-08-10 15:48:08,833 ] 43 root - INFO - Ingestion of the data is completed
+[ 2023-08-10 15:48:08,846 ] 62 root - INFO - Read train and test data completed
+[ 2023-08-10 15:48:08,846 ] 64 root - INFO - Obtaining preprocessing object
+[ 2023-08-10 15:48:08,846 ] 78 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[ 2023-08-10 15:48:08,880 ] 88 root - INFO - Saved preprocessing object.
+[ 2023-08-10 15:48:08,883 ] 147 root - INFO - Splitting our data into dependent and independent features

@@ -1,0 +1,9 @@
+[ 2023-08-13 18:53:22,641 ] 187 werkzeug - WARNING -  * Debugger is active!
+[ 2023-08-13 18:53:22,641 ] 187 werkzeug - INFO -  * Debugger PIN: 106-685-408
+[ 2023-08-13 18:53:40,780 ] 187 werkzeug - INFO - 127.0.0.1 - - [13/Aug/2023 18:53:40] "GET /predictdata HTTP/1.1" 200 -
+[ 2023-08-13 18:53:52,816 ] 187 werkzeug - INFO - 127.0.0.1 - - [13/Aug/2023 18:53:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2023-08-13 18:53:53,201 ] 187 werkzeug - INFO - 127.0.0.1 - - [13/Aug/2023 18:53:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2023-08-13 18:54:07,427 ] 187 werkzeug - INFO - 127.0.0.1 - - [13/Aug/2023 18:54:07] "POST /predictdata HTTP/1.1" 200 -
+[ 2023-08-13 18:54:14,316 ] 187 werkzeug - INFO - 127.0.0.1 - - [13/Aug/2023 18:54:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2023-08-13 18:54:14,562 ] 187 werkzeug - INFO - 127.0.0.1 - - [13/Aug/2023 18:54:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2023-08-13 19:11:07,692 ] 187 werkzeug - INFO -  * Detected change in 'C:\\Users\\bhara\\Downloads\\newproject car modular1\\app.py', reloading

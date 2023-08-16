@@ -1,0 +1,305 @@
+[ 2023-08-11 22:39:37,802 ] 187 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.43.75:5000
+[ 2023-08-11 22:39:37,803 ] 187 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-08-11 22:40:43,372 ] 1414 app - ERROR - Exception on /predictdata [GET]
+Traceback (most recent call last):
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 17, in predict_datapoint
+    return render_template('index.html')
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\bhara\Downloads\newproject car modular1\templates\index.html", line 6, in top-level template code
+    <form action="{{ url_for('predictdata')}}" method="post">
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\werkzeug\routing\map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'predictdata'. Did you mean 'predict_datapoint' instead?
+[ 2023-08-11 22:40:43,385 ] 187 werkzeug - INFO - 127.0.0.1 - - [11/Aug/2023 22:40:43] "[35m[1mGET /predictdata HTTP/1.1[0m" 500 -
+[ 2023-08-11 22:41:52,714 ] 1414 app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 12, in index
+    return render_template('index.html')
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\bhara\Downloads\newproject car modular1\templates\index.html", line 6, in top-level template code
+    <form action="{{ url_for('predictdata')}}" method="post">
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\werkzeug\routing\map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'predictdata'. Did you mean 'predict_datapoint' instead?
+[ 2023-08-11 22:41:52,715 ] 187 werkzeug - INFO - 127.0.0.1 - - [11/Aug/2023 22:41:52] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[ 2023-08-11 22:41:54,896 ] 1414 app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 12, in index
+    return render_template('index.html')
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\bhara\Downloads\newproject car modular1\templates\index.html", line 6, in top-level template code
+    <form action="{{ url_for('predictdata')}}" method="post">
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\werkzeug\routing\map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'predictdata'. Did you mean 'predict_datapoint' instead?
+[ 2023-08-11 22:41:54,899 ] 187 werkzeug - INFO - 127.0.0.1 - - [11/Aug/2023 22:41:54] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[ 2023-08-11 22:44:50,716 ] 1414 app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 12, in index
+    return render_template('index.html')
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\bhara\Downloads\newproject car modular1\templates\index.html", line 6, in top-level template code
+    <form action="{{ url_for('predictdata')}}" method="post">
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\werkzeug\routing\map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'predictdata'. Did you mean 'predict_datapoint' instead?
+[ 2023-08-11 22:44:50,718 ] 187 werkzeug - INFO - 127.0.0.1 - - [11/Aug/2023 22:44:50] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[ 2023-08-11 22:44:51,522 ] 1414 app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 12, in index
+    return render_template('index.html')
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\bhara\Downloads\newproject car modular1\templates\index.html", line 6, in top-level template code
+    <form action="{{ url_for('predictdata')}}" method="post">
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\werkzeug\routing\map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'predictdata'. Did you mean 'predict_datapoint' instead?
+[ 2023-08-11 22:44:51,524 ] 187 werkzeug - INFO - 127.0.0.1 - - [11/Aug/2023 22:44:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[ 2023-08-11 22:44:51,738 ] 1414 app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 12, in index
+    return render_template('index.html')
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\bhara\Downloads\newproject car modular1\templates\index.html", line 6, in top-level template code
+    <form action="{{ url_for('predictdata')}}" method="post">
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\werkzeug\routing\map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'predictdata'. Did you mean 'predict_datapoint' instead?
+[ 2023-08-11 22:44:51,740 ] 187 werkzeug - INFO - 127.0.0.1 - - [11/Aug/2023 22:44:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[ 2023-08-11 22:44:51,968 ] 1414 app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 12, in index
+    return render_template('index.html')
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\bhara\Downloads\newproject car modular1\templates\index.html", line 6, in top-level template code
+    <form action="{{ url_for('predictdata')}}" method="post">
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\werkzeug\routing\map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'predictdata'. Did you mean 'predict_datapoint' instead?
+[ 2023-08-11 22:44:51,969 ] 187 werkzeug - INFO - 127.0.0.1 - - [11/Aug/2023 22:44:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[ 2023-08-11 22:44:52,191 ] 1414 app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 12, in index
+    return render_template('index.html')
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\bhara\Downloads\newproject car modular1\templates\index.html", line 6, in top-level template code
+    <form action="{{ url_for('predictdata')}}" method="post">
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\werkzeug\routing\map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'predictdata'. Did you mean 'predict_datapoint' instead?
+[ 2023-08-11 22:44:52,192 ] 187 werkzeug - INFO - 127.0.0.1 - - [11/Aug/2023 22:44:52] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[ 2023-08-11 22:44:52,398 ] 1414 app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 12, in index
+    return render_template('index.html')
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\bhara\Downloads\newproject car modular1\templates\index.html", line 6, in top-level template code
+    <form action="{{ url_for('predictdata')}}" method="post">
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\werkzeug\routing\map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'predictdata'. Did you mean 'predict_datapoint' instead?
+[ 2023-08-11 22:44:52,399 ] 187 werkzeug - INFO - 127.0.0.1 - - [11/Aug/2023 22:44:52] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[ 2023-08-11 22:44:52,629 ] 1414 app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 12, in index
+    return render_template('index.html')
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\bhara\Downloads\newproject car modular1\templates\index.html", line 6, in top-level template code
+    <form action="{{ url_for('predictdata')}}" method="post">
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\flask\app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\bhara\anaconda3\envs\env\lib\site-packages\werkzeug\routing\map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'predictdata'. Did you mean 'predict_datapoint' instead?
+[ 2023-08-11 22:44:52,629 ] 187 werkzeug - INFO - 127.0.0.1 - - [11/Aug/2023 22:44:52] "[35m[1mGET / HTTP/1.1[0m" 500 -
